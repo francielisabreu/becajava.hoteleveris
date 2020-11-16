@@ -34,7 +34,7 @@ public class ComodidadeController extends BaseController {
 	}
 
 	@GetMapping(path = "/{id}")
-	public ResponseEntity obter(@PathVariable Long id) {
+	public ResponseEntity <BaseResponse>obter(@PathVariable Long id) {
 		try {
 			ComodidadeResponse response = _service.Obter(id);
 			return ResponseEntity.status(response.statusCode).body(response);

@@ -54,7 +54,7 @@ public class ComodidadeService {
 
 		response.setNome(cliente.get().getNome());
 		response.setId(cliente.get().getId());
-
+	
 		response.message = "Cliente obtido com sucesso!";
 		response.statusCode = 200;
 		return response;

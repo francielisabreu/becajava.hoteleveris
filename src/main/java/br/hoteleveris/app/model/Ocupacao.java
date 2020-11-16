@@ -25,11 +25,16 @@ public class Ocupacao {
 	@JoinColumn(name = "quartoId")
 	private Quarto quarto;
 
+	public Ocupacao() {
+	
+	}
+
 	public Ocupacao(Cliente cliente, Quarto quarto) {
 		super();
 		this.cliente = cliente;
 		this.quarto = quarto;
 	}
+
 
 	public Long getId() {
 		return id;
