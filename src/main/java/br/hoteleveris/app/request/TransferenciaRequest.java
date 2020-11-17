@@ -2,9 +2,9 @@ package br.hoteleveris.app.request;
 
 public class TransferenciaRequest {
 
-	private String hashOrigem;
-	private String hashDestino;
-	private double valor;
+	public String hashOrigem;
+	public String hashDestino;
+	public double valor;
 
 	public String getHashOrigem() {
 		return hashOrigem;
