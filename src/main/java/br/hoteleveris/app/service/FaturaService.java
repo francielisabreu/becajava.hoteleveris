@@ -19,7 +19,7 @@ public class FaturaService {
 	@Autowired
 	public OcupacaoRepository ocupacaoRepository;
 
-	private String hashContaHotel = "123456";
+	private String hash = "hashteste";
 
 	public void inserir() {
 		RestTemplate restTemplate = new RestTemplate();
@@ -32,7 +32,7 @@ public class FaturaService {
 
 			TransferenciaRequest transferencia = new TransferenciaRequest();
 
-			transferencia.setHashDestino(hashContaHotel);
+			transferencia.setHashDestino(hash);
 			transferencia.setHashOrigem(ocupacao.getCliente().getHash());
 			transferencia.setValor(valor);
 
@@ -42,7 +42,5 @@ public class FaturaService {
 			ocupacaoRepository.save(ocupacao);
 		}
 	}
-
-
 
 }
