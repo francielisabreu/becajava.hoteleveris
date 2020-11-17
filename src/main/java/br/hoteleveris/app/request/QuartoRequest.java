@@ -1,11 +1,23 @@
 package br.hoteleveris.app.request;
 
+import java.util.List;
+
 public class QuartoRequest {
 
 	private int andar;
 	private int numero;
 	private String situacao;
 	private Long tipoQuartoId;
+
+	private List<ComodidadeRequest> Comodidade;
+
+	public List<ComodidadeRequest> getComodidade() {
+		return Comodidade;
+	}
+
+	public void setComodidade(List<ComodidadeRequest> comodidade) {
+		Comodidade = comodidade;
+	}
 
 	public int getAndar() {
 		return andar;

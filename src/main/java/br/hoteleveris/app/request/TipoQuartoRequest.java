@@ -6,6 +6,23 @@ public class TipoQuartoRequest {
 	private Double valor;
 	private String descricao;
 
+	public TipoQuartoRequest() {
+
+	}
+
+	public TipoQuartoRequest(Long id) {
+		super();
+		this.id = id;
+
+	}
+
+	public TipoQuartoRequest(Long id, Double valor, String descricao) {
+		super();
+		this.id = id;
+		this.valor = valor;
+		this.descricao = descricao;
+	}
+
 	public Long getId() {
 		return id;
 	}

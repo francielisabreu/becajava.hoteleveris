@@ -9,6 +9,28 @@ public class TipoQuarto {
 	private Long id;
 	private Double valor;
 	private String descricao;
+	
+	public TipoQuarto() {
+		
+	}
+
+	
+	
+	public TipoQuarto(Long id) {
+		super();
+		this.id = id;
+	}
+
+
+
+	public TipoQuarto(Long id, Double valor, String descricao) {
+		super();
+		this.id = id;
+		this.valor = valor;
+		this.descricao = descricao;
+	}
+
+
 
 	public Long getId() {
 		return id;

@@ -21,6 +21,21 @@ public class QuartoComodidade {
 	@JoinColumn(name = "comodidadeId")
 	private Comodidade comodidade;
 
+	public QuartoComodidade() {
+
+	}
+
+	public QuartoComodidade(Long id) {
+		super();
+		this.id = id;
+	}
+
+	public QuartoComodidade(Quarto quarto, Comodidade comodidade) {
+		super();
+		this.quarto = quarto;
+		this.comodidade = comodidade;
+	}
+
 	public Long getId() {
 		return id;
 	}
