@@ -1,5 +1,7 @@
 package br.hoteleveris.app.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +9,7 @@ import br.hoteleveris.app.model.TipoQuarto;
 import br.hoteleveris.app.repository.TipoQuartoRepository;
 import br.hoteleveris.app.request.TipoQuartoRequest;
 import br.hoteleveris.app.response.BaseResponse;
+import br.hoteleveris.app.response.TipoQuartoListResponse;
 
 @Service
 public class TipoQuartoService {
@@ -43,5 +46,4 @@ public class TipoQuartoService {
 		return response;
 
 	}
-
 }

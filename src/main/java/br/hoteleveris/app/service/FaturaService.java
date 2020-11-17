@@ -14,7 +14,7 @@ import br.hoteleveris.app.response.BaseResponse;
 import br.hoteleveris.app.request.*;
 
 @Service
-public class FaturaService{
+public class FaturaService {
 
 	@Autowired
 	public OcupacaoRepository ocupacaoRepository;
@@ -31,13 +31,12 @@ public class FaturaService{
 			double valor = ocupacao.getQuarto().getTipoQuarto().getValor() * ocupacao.getQntDiaria();
 
 			TransferenciaRequest transferencia = new TransferenciaRequest();
-			
 
 			transferencia.setHashDestino(hashContaHotel);
 			transferencia.setHashOrigem(ocupacao.getCliente().getHash());
 			transferencia.setValor(valor);
 
-			BaseResponse response = restTemplate.postForObject(uri, transferencia, BaseResponse.class);
+			BaseResponse response = restTemplate.postForObject(uri, transferencia(), BaseResponse.class);
 
 			ocupacao.setSituacao("P");
 			ocupacaoRepository.save(ocupacao);
@@ -48,4 +47,5 @@ public class FaturaService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

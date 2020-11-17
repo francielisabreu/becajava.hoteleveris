@@ -9,6 +9,8 @@ public class TransferenciaRequest {
 	public String getHashOrigem() {
 		return hashOrigem;
 	}
+	
+	public TransferenciaRequest() {}
 
 	public void setHashOrigem(String hashOrigem) {
 		this.hashOrigem = hashOrigem;

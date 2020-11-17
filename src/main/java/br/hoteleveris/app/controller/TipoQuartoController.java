@@ -35,11 +35,5 @@ public class TipoQuartoController extends BaseController {
 
 	}
 
-	/*
-	 * @GetMapping(path = "/{id}") public ResponseEntity obter(@PathVariable Long
-	 * id) { try { TipoQuartoResponse response = _service.Obter(id); return
-	 * ResponseEntity.status(response.statusCode).body(response); } catch (Exception
-	 * e) { return ResponseEntity.status(error.statusCode).body(error); } }
-	 */
-
+	
 }
