@@ -19,11 +19,11 @@ public class FaturaService {
 	@Autowired
 	public OcupacaoRepository ocupacaoRepository;
 
-	private String hash = "hashteste";
+	private String hotelhash = "hotel";
 
 	public void inserir() {
 		RestTemplate restTemplate = new RestTemplate();
-		String uri = "http://localhost:8081/operacao/transferencia";
+		String uri = "http://localhost:8081/operacoes/transferencia";
 
 		List<Ocupacao> lista = ocupacaoRepository.findBySituacao("N");
 
@@ -32,7 +32,7 @@ public class FaturaService {
 
 			TransferenciaRequest transferencia = new TransferenciaRequest();
 
-			transferencia.setHashDestino(hash);
+			transferencia.setHashDestino(hotelhash);
 			transferencia.setHashOrigem(ocupacao.getCliente().getHash());
 			transferencia.setValor(valor);
 
